@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        auth:
+          path: /auth/**
+          url: http://authregister-svc:8083/api/auth
+        contracy:
+          path: /contrats/**
+          url: http://addcontracy-showlist-svc:8084/api/contrats
+        reclamation:
+          path: /reclamation/**
+          url: http://complains-svc:8085/api/reclamation
+server:
+  port: 8080
