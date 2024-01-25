@@ -11,20 +11,20 @@ spring:
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
         - id: comments-route
-          uri: ${COMMENTS_ROUTE_URI:http://localhost:8085}
+          uri: ${COMMENTS_ROUTE_URI:http://localhost:8084}
           predicates:
             - Path=/**
           filters:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
         - id: commentss-route
-          uri: ${COMMENTSs_ROUTE_URI:http://localhost:8084}
+          uri: ${COMMENTSs_ROUTE_URI:http://localhost:8085}
           predicates:
             - Path=/**
           filters:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
-            -
+
         - id: commentsss-route
           uri: ${COMMENTSss_ROUTE_URI:http://localhost:8082}
           predicates:
@@ -32,6 +32,15 @@ spring:
           filters:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+        - id: commentssss-route
+          uri: ${COMMENTSsss_ROUTE_URI:http://localhost:8081}
+          predicates:
+            - Path=/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
 
 management:
   endpoints:
@@ -45,4 +54,4 @@ management:
       enabled: true
 
 server:
-  port: 8081
+  port: 8086
