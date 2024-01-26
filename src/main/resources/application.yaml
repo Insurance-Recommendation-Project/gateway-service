@@ -11,5 +11,15 @@ spring:
         reclamation:
           path: /api/reclamation/**
           url: http://complains-svc:8085/api/reclamation
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
 server:
   port: 8080
