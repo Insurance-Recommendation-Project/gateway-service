@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: auth
-          uri: http://10.103.223.223:8083
+          uri: http://authregister-svc:8083
           predicates:
             - Path=/**
           filters:
@@ -11,7 +11,7 @@ spring:
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
         - id: contract
-          uri: http://10.102.132.247:8084
+          uri: http://addcontracy-showlist-svc:8084
           predicates:
             - Path=/**
           filters:
@@ -19,7 +19,7 @@ spring:
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
         - id: complains
-          uri: http://10.105.149.2:8085
+          uri: http://complains-svc:8085
           predicates:
             - Path=/**
           filters:
