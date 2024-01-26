@@ -1,27 +1,27 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        auth:
-          path: /auth/**
-          url: http://authregister-svc:8083/api/v1
-        contracy:
-          path: /contrats/**
-          url: http://addcontracy-showlist-svc:8084/api/v1
-        reclamation:
-          path: /reclamation/**
-          url: http://complains-svc:8085/api/v1
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-    gateway:
-      enabled: true
-
-server:
-  port: 8080
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        auth:
+#          path: /auth/**
+#          url: http://authregister-svc:8083/api/v1
+#        contracy:
+#          path: /contrats/**
+#          url: http://addcontracy-showlist-svc:8084/api/v1
+#        reclamation:
+#          path: /reclamation/**
+#          url: http://complains-svc:8085/api/v1
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
+#    gateway:
+#      enabled: true
+#
+#server:
+#  port: 8080
