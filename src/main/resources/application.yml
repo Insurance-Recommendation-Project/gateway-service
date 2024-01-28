@@ -25,6 +25,12 @@ spring:
           filters:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+        - id: recommendation
+          uri: http://recommendation-svc:8082
+          predicates:
+            - Path=/**
+          filters:
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
 management:
   endpoints:
