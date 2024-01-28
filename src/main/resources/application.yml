@@ -10,6 +10,7 @@ spring:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
+
         - id: contract
           uri: http://addcontracy-showlist-svc:8084
           predicates:
@@ -17,6 +18,8 @@ spring:
           filters:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+
         - id: complains
           uri: http://complains-svc:8085
           predicates:
@@ -25,13 +28,11 @@ spring:
             - PrefixPath=/api
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
+
         - id: recommendation
           uri: http://recommendation-svc:8082
           predicates:
             - Path=/**
-          filters:
-            - PrefixPath=/
-            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
 management:
   endpoints:
