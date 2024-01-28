@@ -28,9 +28,9 @@ spring:
         - id: recommendation
           uri: http://recommendation-svc:8082
           predicates:
-            - Path=/api/agency_car_predict/**
+            - Path=/api/**
           filters:
-            - RewritePath=/api/(.*) /$\{1}
+            - RewritePath=/api/(?<remaining>.*) /$\{remaining}
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
 management:
