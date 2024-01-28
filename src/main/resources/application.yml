@@ -28,7 +28,7 @@ spring:
         - id: recommendation
           uri: http://recommendation-svc:8082
           predicates:
-            - Path=/**
+            - Path=/agency_car_predict/**
           filters:
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
