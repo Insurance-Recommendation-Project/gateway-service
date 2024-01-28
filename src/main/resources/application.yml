@@ -30,6 +30,7 @@ spring:
           predicates:
             - Path=/**
           filters:
+            - RewritePath=/api/(?<remaining>.*) /$\{remaining}
             - AddResponseHeader=X-Powered-By, DanSON Gateway Service
 
 management:
